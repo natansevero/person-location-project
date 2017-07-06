@@ -1,0 +1,24 @@
+{
+  "name": "person-location-project-server",
+  "version": "0.0.1",
+  "description": "Server application of the person location project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "mongodb",
+    "mongoose",
+    "restful",
+    "api"
+  ],
+  "author": "Natan Severo",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "consign": "^0.1.6",
+    "express": "^4.15.3",
+    "mongoose": "^4.11.1"
+  }
+}
