@@ -4,7 +4,8 @@
   "description": "Client application of the person location project",
   "main": "gulpfile.js",
   "scripts": {
-    "start": "gulp"
+    "server": "gulp server",
+    "build": "gulp"
   },
   "keywords": [
     "angularjs",
@@ -16,6 +17,12 @@
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.18.12",
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-uglify": "^2.1.2",
+    "gulp-usemin": "^0.3.28"
   }
 }

@@ -1,13 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html data-ng-app="PersonLocation">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Person Location</title>
     <!-- Font -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  </head>
-  <body>
 
+    <!-- build:css assets/css/master.min.css -->
+      <!-- Materializecss -->
+      <link rel="stylesheet" href="../bower_components/materialize/dist/css/materialize.min.css">
+      <!-- Leaflet Maps Css -->
+      <link rel="stylesheet" href="../bower_components/leaflet/dist/leaflet.css">
+      <!-- My Stylesheet -->
+      <link rel="stylesheet" href="assets/css/style.css">
+    <!-- endbuild -->
+
+  </head>
+
+  <body>
+    <!-- be'll the menu navegation -->
+    <ul>
+      <li data-ng-class="{ active: activetab == '/register' }"><a href="#!/register">Register</a></li>
+      <li data-ng-class="{ active: activetab == '/list' }"><a href="#!/list">List</a></li>
+    </ul>
+
+    <div data-ng-view></div>
   </body>
+
+  <!-- build:js app/master.min.js -->
+    <!-- JQuery and materialize.js -->
+    <script src="../bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
+    <script src="../bower_components/materialize/dist/js/materialize.min.js" charset="utf-8"></script>
+
+    <!-- Leaflet Maps Js -->
+    <script src="../bower_components/leaflet/dist/leaflet.js" charset="utf-8"></script>
+
+    <!-- Angular Configuration -->
+    <script src="../bower_components/angular/angular.min.js" charset="utf-8"></script>
+    <script src="../bower_components/angular-route/angular-route.min.js" charset="utf-8"></script>
+
+    <!-- Application Module -->
+    <script src="./app/app.module.js" charset="utf-8"></script>
+    <!-- Routes Configuration -->
+    <script src="./app/app.config.js" charset="utf-8"></script>
+
+    <script src="./app/controllers/register.controller.js" charset="utf-8"></script>
+    <script src="./app/controllers/list.controller.js" charset="utf-8"></script>
+  <!-- endbuild -->
 </html>
