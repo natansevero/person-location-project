@@ -4,7 +4,7 @@
   "description": "Client application of the person location project",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp"
   },
   "keywords": [
     "angularjs",
@@ -15,6 +15,7 @@
   "author": "Natan Severo",
   "license": "ISC",
   "devDependencies": {
+    "browser-sync": "^2.18.12",
     "gulp": "^3.9.1"
   }
 }

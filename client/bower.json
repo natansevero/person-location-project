@@ -23,6 +23,8 @@
   "dependencies": {
     "angular": "^1.6.5",
     "bootstrap": "^3.3.7",
-    "leaflet": "^1.1.0"
+    "leaflet": "^1.1.0",
+    "materialize": "^0.99.0",
+    "angular-route": "^1.6.5"
   }
 }
