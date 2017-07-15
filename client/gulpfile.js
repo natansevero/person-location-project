@@ -20,8 +20,13 @@ gulp.task('clean', () => {
     .pipe(clean());
 });
 
-gulp.task('usemin', () => {
-  gulp.src('dist/**/*.html')
+gulp.task('clean-specify', () => {
+  return gulp.src(['dist/app/**/*', 'dist/assets/css/*.css'])
+    .pipe(clean());
+});
+
+gulp.task('usemin', ['clean-specify'], () => {
+  gulp.src('src/**/*.html')
     .pipe(usemin({
       'js': [uglify],
       'css': [autoprefixer, cssmin]

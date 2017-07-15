@@ -12,13 +12,39 @@
   </head>
 
   <body>
-    <!-- be'll the menu navegation -->
-    <ul>
-      <li data-ng-class="{ active: activetab == '/register' }"><a href="#!/register">Register</a></li>
-      <li data-ng-class="{ active: activetab == '/list' }"><a href="#!/list">List</a></li>
-    </ul>
+    <nav>
+      <div class="nav-wrapper green darken-1 nav">
+        <a href="#!/register" class="brand-logo center">
+          <i class="large material-icons">location_on</i>
+          Person Location
+        </a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li data-ng-class="{ active: activetab == '/register' }"><a href="#!/register">Register</a></li>
+          <li data-ng-class="{ active: activetab == '/list' }"><a href="#!/list">List</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li data-ng-class="{ active: activetab == '/register' }"><a href="#!/register">Register</a></li>
+          <li data-ng-class="{ active: activetab == '/list' }"><a href="#!/list">List</a></li>
+        </ul>
+      </div>
+    </nav>
 
     <div data-ng-view></div>
+
+    <footer class="page-footer grey darken-1">
+      <div class="container">
+        <div class="row">
+          <p class="white-text col l6">Project developed for my portfolio</p>
+          <p class="col l1 offset-l5"><a href="https://github.com/natansevero" target="_blank" class="white-text">Github</a></p>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container center-align">
+          © 2017 Natan Severo
+        </div>
+      </div>
+    </footer>
   </body>
 
   <script src="app/master.min.js"></script>
