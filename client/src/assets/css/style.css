@@ -5,3 +5,24 @@ html, body {
 .nav {
   padding: 0 20px 0 20px;
 }
+
+.menu-nav {
+  color: white;
+  padding-left: 20px;
+}
+
+.view {
+  background-color: #e8e5e5;
+  border: 0.1px solid #e8e5e5;
+  padding: 20px 0 20px 0;
+}
+
+/* Register View */
+#map {
+  height: 400px;
+  margin-top: 20px;
+}
+
+form[name="registerForm"] {
+  margin-top: 20px
+}

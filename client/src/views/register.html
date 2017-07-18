@@ -1,0 +1,73 @@
+<div class="view">
+  <section class="section">
+    <h3 class="center-align">Register a person</h3>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="container section">
+    <div class="row">
+      <div class="col s12 m12 l7 xl7">
+        <div id="map" class="z-depth-4"></div>
+      </div> <!-- end first master col -->
+
+      <div class="col s12 m12 l5 xl5">
+        <form name="registerForm">
+          <div class="row">
+            <div class="input-field col s12 m12 l12">
+              <i class="material-icons prefix">account_circle</i>
+              <input type="text" name="name">
+              <label for="name">Name</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12 m12 l12">
+              <i class="material-icons prefix">email</i>
+              <input type="email" name="email" class="validade">
+              <label for="name" data-error="wrong" data-success="right">E-mail</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12 m12 l12">
+              <i class="material-icons prefix">label</i>
+              <input type="number" name="age" class="validade">
+              <label for="name">Age</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col s12 m12 l12">
+              <div class="col m4">
+                <input type="radio" name="genre" value="Male" id="male">
+                <label for="male">Male</label>
+              </div>
+
+              <div class="col m4">
+                <input type="radio" name="genre" value="Female" id="female">
+                <label for="female">Female</label>
+              </div>
+
+              <div class="col m4">
+                <input type="radio" name="genre" value="Other" id="other">
+                <label for="other">Other</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <!-- class disabled -->
+            <div class="col s12 m12 l12">
+              <button type="button" class="waves-effect waves-light btn col m12" name="save-person">
+                Save
+              </button>
+            </div>
+          </div>
+
+        </form>
+      </div> <!-- End second master col -->
+    </div>
+  </section>
+
+</div>
