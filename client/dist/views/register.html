@@ -1,0 +1,71 @@
+<div class="view">
+  <section class="section">
+    <h3 class="center-align">Register a person</h3>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="container section">
+    <div class="row">
+      <div class="col s12 m12 l7 xl7">
+        <div id="map" class="z-depth-4"></div>
+      </div> <!-- end first master col -->
+
+      <div class="col s12 m12 l5 xl5">
+        <form name="Register.registerForm" data-ng-submit="Register.submitForm(Register.form)">
+          <div class="row">
+            <div class="input-field col s12 m12 l12">
+              <i class="material-icons prefix">account_circle</i>
+              <input type="text" name="name" data-ng-model="Register.form.name" required>
+              <label for="name">Name</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12 m12 l12">
+              <i class="material-icons prefix">email</i>
+              <input type="email" name="email" class="validade" data-ng-model="Register.form.email" required>
+              <label for="name" data-error="wrong" data-success="right">E-mail</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12 m12 l12">
+              <i class="material-icons prefix">label</i>
+              <input type="number" name="age" class="validade" data-ng-model="Register.form.age" required>
+              <label for="name">Age</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col s12 m12 l12">
+              <div class="col m4">
+                <input type="radio" name="genre" value="Male" data-ng-model="Register.form.genre" id="male" required>
+                <label for="male">Male</label>
+              </div>
+
+              <div class="col m4">
+                <input type="radio" name="genre" value="Female" data-ng-model="Register.form.genre" id="female" required>
+                <label for="female">Female</label>
+              </div>
+
+              <div class="col m4">
+                <input type="radio" name="genre" value="Other" data-ng-model="Register.form.genre" id="other" required>
+                <label for="other">Other</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <!-- class disabled -->
+            <div class="col s12 m12 l12">
+              <input type="submit" data-ng-class="{ 'disabled': Register.registerForm.$invalid }" class="waves-effect waves-light btn col m12" value="ADD" name="save-person">
+            </div>
+          </div>
+
+        </form>
+      </div> <!-- End second master col -->
+    </div>
+  </section>
+
+</div>

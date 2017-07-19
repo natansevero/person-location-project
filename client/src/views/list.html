@@ -1,2 +1,39 @@
-<h1 class="title">List</h1>
-{{ List.teste2 }}
+<div class="view">
+  <section class="section">
+    <h3 class="center-align">List persons</h3>
+  </section>
+
+  <div class="divider"></div>
+
+  <div class="container section">
+    <div class="row">
+      <table class="col s12 m12 l12 lg12">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>E-mail</th>
+            <th>Age</th>
+            <th>Genre</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr data-ng-repeat="person in List.listOfPersons">
+            <td>{{ person.name }}</td>
+            <td>{{ person.email }}</td>
+            <td>{{ person.age }}</td>
+            <td>{{ person.genre }}</td>
+            <td class="center-align">
+              <button type="button" class="waves-effect yellow darken-3 btn" name="details/edit">DETAILS/EDIT</button>
+            </td>
+            <td class="center-align">
+              <button type="button" class="waves-effect red darken-3 btn" name="delete">DELETE</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

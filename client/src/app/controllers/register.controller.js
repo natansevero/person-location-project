@@ -1,10 +1,10 @@
 (function(){
   'use strict';
 
-  angular.module('RegisterController', [])
-    .controller('RegisterController', RegisterController);
+  angular.module('RegisterController', ['PersonService'])
+    .controller('RegisterController', ['PersonService', RegisterController]);
 
-  function RegisterController() {
+  function RegisterController(PersonService) {
     var vm = this;
     var location;
 
@@ -16,6 +16,20 @@
 
       location = setLocation(position.coords.latitude, position.coords.longitude);
     });
+
+    vm.submitForm = function(person) {
+      person.location = location;
+
+      PersonService
+        .register(person)
+        .then(function(res) {
+          console.log("Response:", res);
+          window.location.href = '/src/#!/list'
+        })
+        .catch(function(err) {
+          console.log("Error:", err);
+        });
+    }
 
   }
 
