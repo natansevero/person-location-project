@@ -12,7 +12,7 @@
       </div> <!-- end first master col -->
 
       <div class="col s12 m12 l5 xl5">
-        <form name="Register.registerForm" data-ng-submit="Register.submitForm(Register.form)">
+        <form name="Register.registerForm">
           <div class="row">
             <div class="input-field col s12 m12 l12">
               <i class="material-icons prefix">account_circle</i>
@@ -24,8 +24,8 @@
           <div class="row">
             <div class="input-field col s12 m12 l12">
               <i class="material-icons prefix">email</i>
-              <input type="email" name="email" class="validade" data-ng-model="Register.form.email" required>
-              <label for="name" data-error="wrong" data-success="right">E-mail</label>
+              <input type="email" name="email" data-ng-class="{ 'invalid': Register.invalidEmail }" data-ng-model="Register.form.email" required>
+              <label for="name" data-error="E-mail already" data-success="right">E-mail</label>
             </div>
           </div>
 
@@ -59,7 +59,9 @@
           <div class="row">
             <!-- class disabled -->
             <div class="col s12 m12 l12">
-              <input type="submit" data-ng-class="{ 'disabled': Register.registerForm.$invalid }" class="waves-effect waves-light btn col m12" value="ADD" name="save-person">
+              <button data-ng-class="{ 'disabled': Register.registerForm.$invalid }" data-ng-click="Register.submitForm(Register.form)" class="waves-effect waves-light btn col m12" name="save-person">
+                ADD
+              </button>
             </div>
           </div>
 

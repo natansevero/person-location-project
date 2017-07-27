@@ -19,5 +19,23 @@
       .catch(function(err) {
         console.log("Error:", err);
       });
+
+    // Method for delete a person
+    vm.delete = function(person) {
+      PersonService
+        .delete(person._id)
+        .then(function(res) {
+          console.log(res.data);
+          var persons = vm.listOfPersons;
+
+          vm.listOfPersons = persons.filter(function(current){
+            return current._id != person._id;
+          })
+        })
+        .catch(function(err){
+          console.log(err);
+        });
+    }
+
   }
 })();

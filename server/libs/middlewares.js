@@ -1,5 +1,7 @@
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const morgan = require('morgan');
+const helmet = require('helmet');
 
 module.exports = app => {
   app.set('port', process.env.PORT || 3000);
@@ -7,6 +9,8 @@ module.exports = app => {
   app.use(cors({
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
   }));
+  app.use(morgan('dev'));
+  app.use(helmet());
   app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({ extended: true }));
 }
